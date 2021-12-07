@@ -94,16 +94,16 @@ parameter BGE   = 3'h4;
 parameter BGEU  = 3'h5;
 
 //SW_SEL SWITCH CSR1
-parameter LOWER_HALFWORD_0BYTE = "0001";
-parameter LOWER_HALFWORD_1BYTE = "0011";
-parameter UPPER_HALFWORD_0BYTE = "0111";
-parameter UPPER_HALFWORD_1BYTE = "1111";
+parameter LOWER_HALFWORD_0BYTE = 4'b0001;
+parameter LOWER_HALFWORD_1BYTE = 4'b0011;
+parameter UPPER_HALFWORD_0BYTE = 4'b0111;
+parameter UPPER_HALFWORD_1BYTE = 4'b1111;
 
 //SW_SEL SWITCH 
-parameter L_HALFWORD_0NIBBLE = "0001";
-parameter L_HALFWORD_1NIBBLE = "0011";
-parameter L_HALFWORD_2NIBBLE = "0111";
-parameter L_HALFWORD_3NIBBLE = "1111";
+parameter L_HALFWORD_0NIBBLE = 4'b0001;
+parameter L_HALFWORD_1NIBBLE = 4'b0011;
+parameter L_HALFWORD_2NIBBLE = 4'b0111;
+parameter L_HALFWORD_3NIBBLE = 4'b1111;
 
 //OP MODES
 parameter OPM_FETCH = 3'h0;

@@ -6,15 +6,14 @@
 `endif
 
         module riscy(
-                input                       GCLK,
-                input                       MRST,
+                input                       CLK,
+                input                       RST,
                 input [DATA_WIDTH-1:0]      CSR0_IN,
                 output reg [DATA_WIDTH-1:0] CSR1
             );
 
             //CONTROL & STATUS REGISTERS======================
             reg [DATA_WIDTH-1:0] csr0;
-            // reg [DATA_WIDTH-1:0] csr1;
             //================================================
 
             //CONTROL UNIT======================================
@@ -70,7 +69,7 @@
 
             //ALU CONTROL=====================================
             wire [ALU_SEL-1:0] alu_sel;
-            wire [2:1] op_mode;
+            wire [2:0] op_mode;
             
             //================================================
 
@@ -79,47 +78,9 @@
             //================================================
             //================================================
 
-            // always_ff @( posedge GCLK ) begin : LED_OUT
-            //     case(SW_SEL)
-            //         LOWER_HALFWORD_0BYTE:
-            //             LED <= csr1[7:0];
-            //         LOWER_HALFWORD_1BYTE:
-            //             LED <= csr1[15:8];
-            //         UPPER_HALFWORD_0BYTE:
-            //             LED <= csr1[23:16];
-            //         UPPER_HALFWORD_1BYTE:
-            //             LED <= csr1[31:23];
-            //         default:
-            //             LED <= 8'hAA;
-            //     endcase
-            // end
-
-            // always_ff @( posedge GCLK ) begin : SW_IN
-            //     if (MRST) begin
-            //         csr0 <= 'h0;
-            //     end
-            //     else begin
-            //         case(SW_SEL)
-            //             L_HALFWORD_0NIBBLE:
-            //                 csr0[3:0] <= SW;
-            //             L_HALFWORD_1NIBBLE:
-            //                 csr0[7:4] <= SW;
-            //             L_HALFWORD_2NIBBLE:
-            //                 csr0[11:8] <= SW;
-            //             L_HALFWORD_3NIBBLE:
-            //                 csr0[15:12] <= SW;
-            //             default:
-            //                 csr0 <= 'hAA;
-            //         endcase
-            //     end
-            // end
-
-
-
-
             //CSR MAP=========================================
-            always_ff @( posedge GCLK ) begin : IN_CSR0
-                if (MRST) begin
+            always_ff @( posedge CLK ) begin : IN_CSR0
+                if (RST) begin
                     csr0 <= 'h0;
                 end
                 else begin
@@ -127,8 +88,8 @@
                 end
             end
 
-            always_ff @( posedge GCLK ) begin : CSR1_OUT
-                if (MRST) begin
+            always_ff @( posedge CLK ) begin : CSR1_OUT
+                if (RST) begin
                     CSR1 <= 'h0;
                 end
                 else begin
@@ -141,8 +102,8 @@
 
             //CTRL U MAP======================================
             ctrl_unt CU(
-                         .CLK            (GCLK),
-                         .RST            (MRST),
+                         .CLK            (CLK),
+                         .RST            (RST),
                          .OPCODE         (ir[6:0]),
                          .PC_WE          (pc_we),
                          .MEM_ADDR_SEL   (mem_addr_sel),
@@ -164,8 +125,8 @@
             assign pc_en = pc_we | br_flg;
 
             prgm_cntr PC(
-                          .CLK    (GCLK),
-                          .RST    (MRST),
+                          .CLK    (CLK),
+                          .RST    (RST),
                           .WE     (pc_en),
                           .PC_IN  (alu_out),
                           .PC_OUT (pc_out)
@@ -187,7 +148,7 @@
                 end
             end
 
-            memory MEM ( .clka  (GCLK),    // input wire clka
+            memory MEM ( .clka  (CLK),    // input wire clka
                          .ena   (mem_ena),      // input wire ena
                          .wea   (mem_we),      // input wire [0 : 0] wea
                          .addra (mem_addr),  // input wire [15 : 0] addra
@@ -197,8 +158,8 @@
 
             //IR MAP==========================================
             instruct_reg IR(
-                             .CLK       (GCLK),
-                             .RST       (MRST),
+                             .CLK       (CLK),
+                             .RST       (RST),
                              .WE        (ir_we),
                              .IR_IN     (mem_out),
                              .IR_OUT    (ir)
@@ -228,8 +189,8 @@
             end
 
             reg_file RF(
-                         .CLK   (GCLK),
-                         .RST   (MRST),
+                         .CLK   (CLK),
+                         .RST   (RST),
                          .WE    (rf_we),
                          .WA    (ir[11:7]),
                          .RA1   (ir[19:15]),
@@ -275,8 +236,8 @@
                 endcase
             end
 
-            always_ff @( posedge GCLK ) begin : ALU_RSLT
-                if ( MRST ) begin
+            always_ff @( posedge CLK ) begin : ALU_RSLT
+                if ( RST ) begin
                     alu_rslt <= 'h0;
                 end
                 else begin
@@ -297,8 +258,8 @@
                     .GEU(alu_flg_out[0])
                 );
 
-            always_ff @( posedge GCLK ) begin : FLAG_REG
-                if (MRST) begin
+            always_ff @( posedge CLK ) begin : FLAG_REG
+                if (RST) begin
                     flag <= 'h0;
                 end
                 else begin

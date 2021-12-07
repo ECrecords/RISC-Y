@@ -2,29 +2,30 @@
 
 module tb_riscy;
 
-reg gclk;
-reg mrst;
+reg clk;
+reg rst;
 reg [31:0] csr0_in;
 wire [31:0] csr1;
 localparam CLK_PERIOD = 10;
+
 riscy RISCY(
-    .GCLK(gclk),
-    .MRST(mrst),
+    .CLK(clk),
+    .RST(rst),
     .CSR0_IN(csr0_in),
     .CSR1(csr1)
 );
 
 initial begin
-    gclk <= 0;
+    clk <= 0;
     forever begin
-        #(CLK_PERIOD/2) gclk <= ~gclk;
+        #(CLK_PERIOD/2) clk <= ~clk;
     end
 end
 
 initial begin
-    mrst <= 1;
+    rst <= 1;
     csr0_in <= 0;
-    #CLK_PERIOD mrst <= 0;
+    #CLK_PERIOD rst <= 0;
 end
 
 

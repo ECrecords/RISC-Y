@@ -95,13 +95,15 @@ def store(rs1, rs2, imm):
 def system(rd, rs1):
     return "{0:012b}".format(0) + "{0:05b}".format(rs1) + "000" + "{0:05b}".format(rd) + opcode["SYSTEM"] + ",\n"
 
+def nop():
+    return "{0:025b}".format(0) + opcode["NOP"] + ",\n"
 
 def write_mem(value):
     return bindigits(value, 32) + "\n"
 
 
 def write_coe():
-    with open('memory_zedboard.coe', 'w') as f:
+    with open('memory_sim.coe', 'w') as f:
         f.write("memory_initialization_radix=2;\n memory_initialization_vector=\n")
         # f.write(load(1, 0, 64))
         # f.write(align())
@@ -119,9 +121,9 @@ def write_coe():
         # f.write(align())
         # f.write(branch("BNE", 3, 1, -4))
         # f.write(align())
-        # f.write(op("SLL", 4, 4, 2))
-        # f.write(align())
         # f.write(system(0, 4))
+        # f.write(align())
+        # f.write(op("SLL", 4, 4, 2))
         # f.write(align())
         # f.write(op("ADD", 6, 6, 2))
         # f.write(align())
@@ -129,11 +131,11 @@ def write_coe():
         # f.write(align())
         # f.write(jal(0, -20))
         # f.write(align())
-        # f.write(op("ADD", 0, 0, 0))
+        # f.write(nop())
         # f.write(align())
-        # f.write(op("ADD", 0, 0, 0))
+        # f.write(nop())
         # f.write(align())
-        # f.write(op("ADD", 0, 0, 0))
+        # f.write(nop())
         # f.write(align())
         # f.write(write_mem(3125000))
         # f.write(align())
@@ -148,7 +150,7 @@ def write_coe():
         f.write(align())
         f.write(branch("BNE", 5, 3, -6))
         f.write(align())
-        f.write(op("ADD", 0, 0, 0))
+        f.write(nop())
         f.write(align())
         f.write(jal(0, -4))
         f.write(align())

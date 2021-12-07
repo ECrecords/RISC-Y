@@ -56,10 +56,10 @@ typedef void (*funcp)(char *, char *);
 extern int main(int, char**);
 IKI_DLLESPEC extern void execute_85(char*, char *);
 IKI_DLLESPEC extern void execute_86(char*, char *);
+IKI_DLLESPEC extern void execute_289(char*, char *);
 IKI_DLLESPEC extern void execute_290(char*, char *);
 IKI_DLLESPEC extern void execute_291(char*, char *);
 IKI_DLLESPEC extern void execute_292(char*, char *);
-IKI_DLLESPEC extern void execute_293(char*, char *);
 IKI_DLLESPEC extern void execute_4(char*, char *);
 IKI_DLLESPEC extern void execute_6(char*, char *);
 IKI_DLLESPEC extern void execute_18(char*, char *);
@@ -104,7 +104,6 @@ IKI_DLLESPEC extern void execute_285(char*, char *);
 IKI_DLLESPEC extern void execute_286(char*, char *);
 IKI_DLLESPEC extern void execute_287(char*, char *);
 IKI_DLLESPEC extern void execute_288(char*, char *);
-IKI_DLLESPEC extern void execute_289(char*, char *);
 IKI_DLLESPEC extern void execute_9(char*, char *);
 IKI_DLLESPEC extern void execute_11(char*, char *);
 IKI_DLLESPEC extern void execute_13(char*, char *);
@@ -194,23 +193,21 @@ IKI_DLLESPEC extern void execute_88(char*, char *);
 IKI_DLLESPEC extern void execute_89(char*, char *);
 IKI_DLLESPEC extern void execute_90(char*, char *);
 IKI_DLLESPEC extern void execute_91(char*, char *);
+IKI_DLLESPEC extern void execute_293(char*, char *);
 IKI_DLLESPEC extern void execute_294(char*, char *);
 IKI_DLLESPEC extern void execute_295(char*, char *);
 IKI_DLLESPEC extern void execute_296(char*, char *);
 IKI_DLLESPEC extern void execute_297(char*, char *);
 IKI_DLLESPEC extern void execute_298(char*, char *);
-IKI_DLLESPEC extern void execute_299(char*, char *);
 IKI_DLLESPEC extern void vlog_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
-IKI_DLLESPEC extern void transaction_40(char*, char*, unsigned, unsigned, unsigned);
-IKI_DLLESPEC extern void transaction_42(char*, char*, unsigned, unsigned, unsigned);
-IKI_DLLESPEC extern void transaction_57(char*, char*, unsigned, unsigned, unsigned);
+IKI_DLLESPEC extern void transaction_54(char*, char*, unsigned, unsigned, unsigned);
 IKI_DLLESPEC extern void vlog_transfunc_eventcallback_2state(char*, char*, unsigned, unsigned, unsigned, char *);
-funcp funcTab[151] = {(funcp)execute_85, (funcp)execute_86, (funcp)execute_290, (funcp)execute_291, (funcp)execute_292, (funcp)execute_293, (funcp)execute_4, (funcp)execute_6, (funcp)execute_18, (funcp)execute_57, (funcp)execute_68, (funcp)execute_70, (funcp)execute_72, (funcp)execute_79, (funcp)execute_81, (funcp)execute_83, (funcp)execute_93, (funcp)execute_94, (funcp)execute_257, (funcp)execute_258, (funcp)execute_259, (funcp)execute_260, (funcp)execute_261, (funcp)execute_262, (funcp)execute_263, (funcp)execute_264, (funcp)execute_265, (funcp)execute_266, (funcp)execute_267, (funcp)execute_268, (funcp)execute_269, (funcp)execute_270, (funcp)execute_271, (funcp)execute_272, (funcp)execute_273, (funcp)execute_274, (funcp)execute_275, (funcp)execute_276, (funcp)execute_277, (funcp)execute_278, (funcp)execute_279, (funcp)execute_280, (funcp)execute_281, (funcp)execute_282, (funcp)execute_283, (funcp)execute_284, (funcp)execute_285, (funcp)execute_286, (funcp)execute_287, (funcp)execute_288, (funcp)execute_289, (funcp)execute_9, (funcp)execute_11, (funcp)execute_13, (funcp)execute_92, (funcp)execute_16, (funcp)vlog_const_rhs_process_execute_0_fast_no_reg_no_agg, (funcp)execute_225, (funcp)execute_226, (funcp)execute_235, (funcp)execute_236, (funcp)execute_237, (funcp)execute_238, (funcp)execute_239, (funcp)execute_241, (funcp)execute_246, (funcp)execute_247, (funcp)execute_248, (funcp)execute_249, (funcp)execute_250, (funcp)execute_22, (funcp)execute_50, (funcp)vlog_simple_process_execute_0_fast_no_reg_no_agg, (funcp)execute_211, (funcp)execute_212, (funcp)execute_213, (funcp)execute_214, (funcp)execute_215, (funcp)execute_216, (funcp)execute_217, (funcp)execute_31, (funcp)execute_32, (funcp)execute_33, (funcp)execute_47, (funcp)execute_48, (funcp)execute_49, (funcp)execute_143, (funcp)execute_144, (funcp)execute_145, (funcp)execute_146, (funcp)execute_147, (funcp)execute_148, (funcp)execute_149, (funcp)execute_151, (funcp)execute_152, (funcp)execute_153, (funcp)execute_154, (funcp)execute_158, (funcp)execute_162, (funcp)execute_163, (funcp)execute_164, (funcp)execute_165, (funcp)execute_166, (funcp)execute_167, (funcp)execute_170, (funcp)execute_172, (funcp)execute_173, (funcp)execute_174, (funcp)execute_175, (funcp)execute_176, (funcp)execute_177, (funcp)execute_178, (funcp)execute_179, (funcp)execute_180, (funcp)execute_181, (funcp)execute_182, (funcp)execute_183, (funcp)execute_184, (funcp)execute_185, (funcp)execute_35, (funcp)execute_36, (funcp)execute_37, (funcp)execute_38, (funcp)execute_155, (funcp)execute_156, (funcp)execute_157, (funcp)execute_45, (funcp)execute_46, (funcp)execute_52, (funcp)execute_55, (funcp)execute_60, (funcp)execute_63, (funcp)execute_66, (funcp)execute_75, (funcp)execute_77, (funcp)vlog_simple_process_execute_0_fast_for_reg, (funcp)execute_88, (funcp)execute_89, (funcp)execute_90, (funcp)execute_91, (funcp)execute_294, (funcp)execute_295, (funcp)execute_296, (funcp)execute_297, (funcp)execute_298, (funcp)execute_299, (funcp)vlog_transfunc_eventcallback, (funcp)transaction_40, (funcp)transaction_42, (funcp)transaction_57, (funcp)vlog_transfunc_eventcallback_2state};
-const int NumRelocateId= 151;
+funcp funcTab[148] = {(funcp)execute_85, (funcp)execute_86, (funcp)execute_289, (funcp)execute_290, (funcp)execute_291, (funcp)execute_292, (funcp)execute_4, (funcp)execute_6, (funcp)execute_18, (funcp)execute_57, (funcp)execute_68, (funcp)execute_70, (funcp)execute_72, (funcp)execute_79, (funcp)execute_81, (funcp)execute_83, (funcp)execute_93, (funcp)execute_94, (funcp)execute_257, (funcp)execute_258, (funcp)execute_259, (funcp)execute_260, (funcp)execute_261, (funcp)execute_262, (funcp)execute_263, (funcp)execute_264, (funcp)execute_265, (funcp)execute_266, (funcp)execute_267, (funcp)execute_268, (funcp)execute_269, (funcp)execute_270, (funcp)execute_271, (funcp)execute_272, (funcp)execute_273, (funcp)execute_274, (funcp)execute_275, (funcp)execute_276, (funcp)execute_277, (funcp)execute_278, (funcp)execute_279, (funcp)execute_280, (funcp)execute_281, (funcp)execute_282, (funcp)execute_283, (funcp)execute_284, (funcp)execute_285, (funcp)execute_286, (funcp)execute_287, (funcp)execute_288, (funcp)execute_9, (funcp)execute_11, (funcp)execute_13, (funcp)execute_92, (funcp)execute_16, (funcp)vlog_const_rhs_process_execute_0_fast_no_reg_no_agg, (funcp)execute_225, (funcp)execute_226, (funcp)execute_235, (funcp)execute_236, (funcp)execute_237, (funcp)execute_238, (funcp)execute_239, (funcp)execute_241, (funcp)execute_246, (funcp)execute_247, (funcp)execute_248, (funcp)execute_249, (funcp)execute_250, (funcp)execute_22, (funcp)execute_50, (funcp)vlog_simple_process_execute_0_fast_no_reg_no_agg, (funcp)execute_211, (funcp)execute_212, (funcp)execute_213, (funcp)execute_214, (funcp)execute_215, (funcp)execute_216, (funcp)execute_217, (funcp)execute_31, (funcp)execute_32, (funcp)execute_33, (funcp)execute_47, (funcp)execute_48, (funcp)execute_49, (funcp)execute_143, (funcp)execute_144, (funcp)execute_145, (funcp)execute_146, (funcp)execute_147, (funcp)execute_148, (funcp)execute_149, (funcp)execute_151, (funcp)execute_152, (funcp)execute_153, (funcp)execute_154, (funcp)execute_158, (funcp)execute_162, (funcp)execute_163, (funcp)execute_164, (funcp)execute_165, (funcp)execute_166, (funcp)execute_167, (funcp)execute_170, (funcp)execute_172, (funcp)execute_173, (funcp)execute_174, (funcp)execute_175, (funcp)execute_176, (funcp)execute_177, (funcp)execute_178, (funcp)execute_179, (funcp)execute_180, (funcp)execute_181, (funcp)execute_182, (funcp)execute_183, (funcp)execute_184, (funcp)execute_185, (funcp)execute_35, (funcp)execute_36, (funcp)execute_37, (funcp)execute_38, (funcp)execute_155, (funcp)execute_156, (funcp)execute_157, (funcp)execute_45, (funcp)execute_46, (funcp)execute_52, (funcp)execute_55, (funcp)execute_60, (funcp)execute_63, (funcp)execute_66, (funcp)execute_75, (funcp)execute_77, (funcp)vlog_simple_process_execute_0_fast_for_reg, (funcp)execute_88, (funcp)execute_89, (funcp)execute_90, (funcp)execute_91, (funcp)execute_293, (funcp)execute_294, (funcp)execute_295, (funcp)execute_296, (funcp)execute_297, (funcp)execute_298, (funcp)vlog_transfunc_eventcallback, (funcp)transaction_54, (funcp)vlog_transfunc_eventcallback_2state};
+const int NumRelocateId= 148;
 
 void relocate(char *dp)
 {
-	iki_relocate(dp, "xsim.dir/tb_riscy_behav/xsim.reloc",  (void **)funcTab, 151);
+	iki_relocate(dp, "xsim.dir/tb_riscy_behav/xsim.reloc",  (void **)funcTab, 148);
 
 	/*Populate the transaction function pointer field in the whole net structure */
 }

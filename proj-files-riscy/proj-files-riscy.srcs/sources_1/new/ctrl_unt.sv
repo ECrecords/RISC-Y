@@ -148,7 +148,7 @@
                         //=========================
                         //Memory
                         MEM_WE              <= 0;
-                        MEM_RE              <= 1;
+                        MEM_RE              <= 0;
                         MEM_ADDR_SEL        <= 'hx;
                         //=========================
                         //Intruct Reg
