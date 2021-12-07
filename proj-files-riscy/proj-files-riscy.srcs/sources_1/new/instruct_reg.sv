@@ -6,10 +6,10 @@
 `endif
 
 module instruct_reg(
-    input CLK,
-    input RST,
-    input WE,
-    input [DATA_WIDTH-1:0] IR_IN,
+    input                       CLK,
+    input                       RST,
+    input                       WE,
+    input [DATA_WIDTH-1:0]      IR_IN,
     output reg [DATA_WIDTH-1:0] IR_OUT
 );
 

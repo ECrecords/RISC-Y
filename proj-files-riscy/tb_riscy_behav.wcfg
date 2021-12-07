@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_riscy_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="\$unit_alu_sv " />
+            <top_module name="glbl" />
+            <top_module name="tb_riscy" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="175.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="243.101 ns"></ZoomEndTime>
+      <Cursor1Time time="0.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="134"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/tb_riscy/RISCY/GCLK" type="logic">
+      <obj_property name="ElementShortName">GCLK</obj_property>
+      <obj_property name="ObjectShortName">GCLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_riscy/RISCY/MRST" type="logic">
+      <obj_property name="ElementShortName">MRST</obj_property>
+      <obj_property name="ObjectShortName">MRST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_riscy/RISCY/CU/curr_state" type="array">
+      <obj_property name="ElementShortName">curr_state[31:0]</obj_property>
+      <obj_property name="ObjectShortName">curr_state[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="group153" type="group">
+      <obj_property name="label">IR</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_riscy/RISCY/ir_we" type="logic">
+         <obj_property name="ElementShortName">ir_we</obj_property>
+         <obj_property name="ObjectShortName">ir_we</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_riscy/RISCY/ir" type="array">
+         <obj_property name="ElementShortName">ir[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ir[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group150" type="group">
+      <obj_property name="label">CSR</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_riscy/RISCY/csr_we" type="logic">
+         <obj_property name="ElementShortName">csr_we</obj_property>
+         <obj_property name="ObjectShortName">csr_we</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_riscy/RISCY/CSR0_IN" type="array">
+         <obj_property name="ElementShortName">CSR0_IN[31:0]</obj_property>
+         <obj_property name="ObjectShortName">CSR0_IN[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_riscy/RISCY/CSR1" type="array">
+         <obj_property name="ElementShortName">CSR1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">CSR1[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_riscy/RISCY/csr0" type="array">
+         <obj_property name="ElementShortName">csr0[31:0]</obj_property>
+         <obj_property name="ObjectShortName">csr0[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group151" type="group">
+      <obj_property name="label">PC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_riscy/RISCY/pc_we" type="logic">
+         <obj_property name="ElementShortName">pc_we</obj_property>
+         <obj_property name="ObjectShortName">pc_we</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_riscy/RISCY/pc_en" type="logic">
+         <obj_property name="ElementShortName">pc_en</obj_property>
+         <obj_property name="ObjectShortName">pc_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_riscy/RISCY/pc_out" type="array">
+         <obj_property name="ElementShortName">pc_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">pc_out[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group154" type="group">
+      <obj_property name="label">REG_FILE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_riscy/RISCY/rf_we" type="logic">
+         <obj_property name="ElementShortName">rf_we</obj_property>
+         <obj_property name="ObjectShortName">rf_we</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_riscy/RISCY/rf_wdata_sel" type="array">
+         <obj_property name="ElementShortName">rf_wdata_sel[1:0]</obj_property>
+         <obj_property name="ObjectShortName">rf_wdata_sel[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_riscy/RISCY/rf_wdata" type="array">
+         <obj_property name="ElementShortName">rf_wdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rf_wdata[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/tb_riscy/RISCY/is_branch" type="logic">
+      <obj_property name="ElementShortName">is_branch</obj_property>
+      <obj_property name="ObjectShortName">is_branch</obj_property>
+   </wvobject>
+   <wvobject fp_name="group152" type="group">
+      <obj_property name="label">MEM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_riscy/RISCY/mem_we" type="logic">
+         <obj_property name="ElementShortName">mem_we</obj_property>
+         <obj_property name="ObjectShortName">mem_we</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_riscy/RISCY/mem_re" type="logic">
+         <obj_property name="ElementShortName">mem_re</obj_property>
+         <obj_property name="ObjectShortName">mem_re</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_riscy/RISCY/mem_ena" type="logic">
+         <obj_property name="ElementShortName">mem_ena</obj_property>
+         <obj_property name="ObjectShortName">mem_ena</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_riscy/RISCY/mem_addr_sel" type="logic">
+         <obj_property name="ElementShortName">mem_addr_sel</obj_property>
+         <obj_property name="ObjectShortName">mem_addr_sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_riscy/RISCY/mem_addr" type="array">
+         <obj_property name="ElementShortName">mem_addr[15:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_addr[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_riscy/RISCY/mem_out" type="array">
+         <obj_property name="ElementShortName">mem_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_out[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group159" type="group">
+      <obj_property name="label">IMM GEN</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_riscy/RISCY/imm_sel" type="array">
+         <obj_property name="ElementShortName">imm_sel[2:0]</obj_property>
+         <obj_property name="ObjectShortName">imm_sel[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_riscy/RISCY/ext_imm" type="array">
+         <obj_property name="ElementShortName">ext_imm[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ext_imm[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/tb_riscy/RISCY/x1" type="array">
+      <obj_property name="ElementShortName">x1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">x1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_riscy/RISCY/x2" type="array">
+      <obj_property name="ElementShortName">x2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">x2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="group149" type="group">
+      <obj_property name="label">ALU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="group162" type="group">
+         <obj_property name="label">CTRL</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/tb_riscy/RISCY/alua_sel" type="logic">
+            <obj_property name="ElementShortName">alua_sel</obj_property>
+            <obj_property name="ObjectShortName">alua_sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/tb_riscy/RISCY/alub_sel" type="array">
+            <obj_property name="ElementShortName">alub_sel[1:0]</obj_property>
+            <obj_property name="ObjectShortName">alub_sel[1:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/tb_riscy/RISCY/alu_sel" type="array">
+            <obj_property name="ElementShortName">alu_sel[3:0]</obj_property>
+            <obj_property name="ObjectShortName">alu_sel[3:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/tb_riscy/RISCY/alu_a" type="array">
+         <obj_property name="ElementShortName">alu_a[31:0]</obj_property>
+         <obj_property name="ObjectShortName">alu_a[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_riscy/RISCY/alu_b" type="array">
+         <obj_property name="ElementShortName">alu_b[31:0]</obj_property>
+         <obj_property name="ObjectShortName">alu_b[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_riscy/RISCY/alu_out" type="array">
+         <obj_property name="ElementShortName">alu_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">alu_out[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_riscy/RISCY/alu_rslt" type="array">
+         <obj_property name="ElementShortName">alu_rslt[31:0]</obj_property>
+         <obj_property name="ObjectShortName">alu_rslt[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_riscy/RISCY/alu_flg_out" type="array">
+         <obj_property name="ElementShortName">alu_flg_out[5:0]</obj_property>
+         <obj_property name="ObjectShortName">alu_flg_out[5:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group155" type="group">
+      <obj_property name="label">BRANCH</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_riscy/RISCY/br_flg" type="logic">
+         <obj_property name="ElementShortName">br_flg</obj_property>
+         <obj_property name="ObjectShortName">br_flg</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_riscy/RISCY/sel_flag" type="logic">
+         <obj_property name="ElementShortName">sel_flag</obj_property>
+         <obj_property name="ObjectShortName">sel_flag</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_riscy/RISCY/flag" type="array">
+         <obj_property name="ElementShortName">flag[5:0]</obj_property>
+         <obj_property name="ObjectShortName">flag[5:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

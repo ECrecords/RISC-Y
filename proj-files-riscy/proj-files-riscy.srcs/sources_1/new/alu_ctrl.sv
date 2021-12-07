@@ -6,15 +6,15 @@
 `endif
 
 module alu_ctrl(
-        input [14:12] FUNCT3,
-        input [31:25] FUNCT7,
-        input [4:2] OPCODE,
-        output reg [ALU_SEL-1:0] ALU_SEL
+        input [14:12]               FUNCT3,
+        input [31:25]               FUNCT7,
+        input [2:0]                 OP_MODE,
+        output reg [ALU_SEL-1:0]    ALU_SEL
     );
 
     always_comb begin : GEN_ALU_OP
-        case(OPCODE)
-            OP_IMM:
+        case(OP_MODE)
+            OPM_OPIMM:
                 if ( FUNCT3 == ADD ) begin
                     ALU_SEL <= ALU_ADD;
                 end
@@ -50,7 +50,7 @@ module alu_ctrl(
                 else begin
                     ALU_SEL <= 'hx;
                 end
-            OP:
+            OPM_OP:
                 if ( FUNCT7 == F7_EN1 ) begin
                     if ( FUNCT3 == SUB ) begin
                         ALU_SEL <= ALU_SUB;
@@ -98,7 +98,13 @@ module alu_ctrl(
                     ALU_SEL <= 'hx;
                 end
 
-            JAL | BRANCH | LOAD | STORE | NOP:
+            OPM_JAL: 
+                ALU_SEL <= ALU_ADD;
+            OPM_BRANCH:
+                ALU_SEL <= ALU_ADD;
+            OPM_LOAD_STORE:
+                ALU_SEL <= ALU_ADD;
+            OPM_NOP:
                 ALU_SEL <= ALU_ADD;
             default:
                 ALU_SEL <= 'hx;

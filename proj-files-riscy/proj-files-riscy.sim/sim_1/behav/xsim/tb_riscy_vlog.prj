@@ -1,0 +1,20 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../proj-files-riscy.srcs/sources_1/new" \
+"../../../../proj-files-riscy.gen/sources_1/ip/memory/sim/memory.v" \
+
+sv xil_defaultlib  --include "../../../../proj-files-riscy.srcs/sources_1/new" \
+"../../../../proj-files-riscy.srcs/sources_1/new/alu.sv" \
+"../../../../proj-files-riscy.srcs/sources_1/new/alu_ctrl.sv" \
+"../../../../proj-files-riscy.srcs/sources_1/new/ctrl_unt.sv" \
+"../../../../proj-files-riscy.srcs/sources_1/new/imm_gen.sv" \
+"../../../../proj-files-riscy.srcs/sources_1/new/instruct_reg.sv" \
+"../../../../proj-files-riscy.srcs/sources_1/new/prgm_cntr.sv" \
+"../../../../proj-files-riscy.srcs/sources_1/new/reg_file.sv" \
+"../../../../proj-files-riscy.srcs/sources_1/new/riscy.sv" \
+"../../../../proj-files-riscy.srcs/sim_1/new/tb_riscy.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

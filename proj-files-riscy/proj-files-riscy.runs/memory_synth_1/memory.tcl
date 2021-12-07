@@ -70,6 +70,10 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "memory_synth_1" START { ROLLUP_AUTO }
+set_param checkpoint.writeSynthRtdsInDcp 1
+set_param synth.incrementalSynthesisCache C:/Users/elvis/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-6340-Diogenes-Turing/incrSyn
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -90,7 +94,7 @@ set_property ip_output_repo c:/Users/elvis/Documents/CSUN/2021-2022/Fall-2021/EC
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/elvis/Documents/CSUN/2021-2022/Fall-2021/ECE526/RISC-Y/proj-files-riscy/proj-files-riscy.srcs/sources_1/ip/memory/memory.xci
+read_ip -quiet C:/Users/elvis/Documents/CSUN/2021-2022/Fall-2021/ECE526/RISC-Y/proj-files-riscy/proj-files-riscy.srcs/sources_1/ip/memory/memory.xci
 set_property used_in_implementation false [get_files -all c:/Users/elvis/Documents/CSUN/2021-2022/Fall-2021/ECE526/RISC-Y/proj-files-riscy/proj-files-riscy.gen/sources_1/ip/memory/memory_ooc.xdc]
 
 OPTRACE "Adding files" END { }

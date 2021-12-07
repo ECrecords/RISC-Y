@@ -6,12 +6,12 @@
 `endif
 
 module imm_gen (
-    input [31:7] IMM_FIELD,
-    input [2:0] COND_SEL,
+    input [31:7]                IMM_FIELD,
+    input [2:0]                 IMM_SEL,
     output reg [DATA_WIDTH-1:0] EXT_IMM
 );
     always_comb begin : GEN_IMM
-        case(COND_SEL)
+        case(IMM_SEL)
             I_IMM:
                 EXT_IMM <= {{21{IMM_FIELD[31]}}, IMM_FIELD[30:25], IMM_FIELD[24:21], IMM_FIELD[20]};
             S_IMM:
