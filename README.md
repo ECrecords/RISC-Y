@@ -1,12 +1,25 @@
 # RISC-Y
 
-## SystemVerilog Code
+## Pyhon Assembler
+
+Assembler still needs work, currently code needs to be hard coded into the script  
+to generate a ```coe``` file.
+
+[assembler.py][assembler.py]  
+
+## COE Files
+
+Simulation Program: [memory_sim.coe](memory_sim.coe)  
+
+Zedboard Program: [memory_zedboard.coe](memory_zedboard.coe)  
+
+## SystemVerilog Design Code
 
 Zedboared Interface: [top_zedboard.sv](proj-files-riscy/proj-files-riscy.srcs/sources_1/new/top_zedboard.sv)  
 
-Top Module (RISC-Y): [riscy.sv](proj-files-riscy/proj-files-riscy.srcs/sources_1/new/riscy.sv)  
-
 Global Constant: [global.svh](proj-files-riscy/proj-files-riscy.srcs/sources_1/new/global.svh)  
+
+Top Module (RISC-Y): [riscy.sv](proj-files-riscy/proj-files-riscy.srcs/sources_1/new/riscy.sv)  
 
 Control Unit: [ctrl_unt.sv](proj-files-riscy/proj-files-riscy.srcs/sources_1/new/ctrl_unt.sv)  
 
@@ -23,3 +36,11 @@ Immediate Gennerator: [imm_gen.sv](proj-files-riscy/proj-files-riscy.srcs/source
 ALU Controller: [alu_ctrl.sv](proj-files-riscy/proj-files-riscy.srcs/sources_1/new/alu_ctrl.sv)  
 
 ALU: [alu.sv](proj-files-riscy/proj-files-riscy.srcs/sources_1/new/alu.sv)  
+
+## SystemVerilog Test-bench Code
+
+RISC-Y: [tb_riscy.sv](proj-files-riscy/proj-files-riscy.srcs/sim_1/new/tb_riscy.sv)
+
+ALU: [tb_alu.sv](proj-files-riscy/proj-files-riscy.srcs/sim_1/new/tb_alu.sv)
+
+Control Unit: [tb_ctrl_unt.sv](proj-files-riscy/proj-files-riscy.srcs/sim_1/new/tb_ctrl_unt.sv)
