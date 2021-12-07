@@ -5,7 +5,7 @@
 Assembler still needs work, currently code needs to be hard coded into the script  
 to generate a ```coe``` file.
 
-[assembler.py][assembler.py]  
+[assembler.py](assembler.py)
 
 ## COE Files
 
