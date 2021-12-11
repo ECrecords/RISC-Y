@@ -45,15 +45,15 @@ riscy CPU (
 always_comb begin : LED_OUT
     case(SEL)
         LOWER_HALFWORD_0BYTE:
-            LED <= csr1[7:0];
+            LED = csr1[7:0];
         LOWER_HALFWORD_1BYTE:
-            LED <= csr1[15:8];
+            LED = csr1[15:8];
         UPPER_HALFWORD_0BYTE:
-            LED <= csr1[23:16];
+            LED = csr1[23:16];
         UPPER_HALFWORD_1BYTE:
-            LED <= csr1[31:23];
+            LED = csr1[31:23];
         default:
-            LED <= 8'hAA;
+            LED = 8'hAA;
     endcase
 end
 
@@ -61,15 +61,15 @@ end
 always_comb begin : SW_IN
     case(SEL)
         L_HALFWORD_0NIBBLE:
-            csr0[3:0] <= SW;
+            csr0[3:0] = SW;
         L_HALFWORD_1NIBBLE:
-            csr0[7:4] <= SW;
+            csr0[7:4] = SW;
         L_HALFWORD_2NIBBLE:
-            csr0[11:8] <= SW;
+            csr0[11:8] = SW;
         L_HALFWORD_3NIBBLE:
-            csr0[15:12] <= SW;
+            csr0[15:12] = SW;
         default:
-            csr0 <= 'hAA;
+            csr0 = 'hAA;
     endcase
 end
 

@@ -12,22 +12,22 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="136.201 ns"></ZoomEndTime>
-      <Cursor1Time time="0.000 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="91.002786 us"></ZoomEndTime>
+      <Cursor1Time time="89.225000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="134"></ValueColumnWidth>
+      <ValueColumnWidth column_width="130"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="11" />
-   <wvobject fp_name="/tb_riscy/RISCY/GCLK" type="logic">
-      <obj_property name="ElementShortName">GCLK</obj_property>
-      <obj_property name="ObjectShortName">GCLK</obj_property>
+   <wvobject fp_name="/tb_riscy/RISCY/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_riscy/RISCY/MRST" type="logic">
-      <obj_property name="ElementShortName">MRST</obj_property>
-      <obj_property name="ObjectShortName">MRST</obj_property>
+   <wvobject fp_name="/tb_riscy/RISCY/RST" type="logic">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_riscy/RISCY/CU/curr_state" type="array">
       <obj_property name="ElementShortName">curr_state[31:0]</obj_property>
@@ -36,7 +36,6 @@
    <wvobject fp_name="group153" type="group">
       <obj_property name="label">IR</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="group404" type="group">
          <obj_property name="label">CTRL</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -53,7 +52,6 @@
    <wvobject fp_name="group151" type="group">
       <obj_property name="label">PC</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="group403" type="group">
          <obj_property name="label">CTRL</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -75,7 +73,6 @@
    <wvobject fp_name="group154" type="group">
       <obj_property name="label">REG_FILE</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="group402" type="group">
          <obj_property name="label">CTRL</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -146,7 +143,6 @@
    <wvobject fp_name="group149" type="group">
       <obj_property name="label">ALU</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="group162" type="group">
          <obj_property name="label">CTRL</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -196,7 +192,6 @@
    <wvobject fp_name="group155" type="group">
       <obj_property name="label">BRANCH</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/tb_riscy/RISCY/br_flg" type="logic">
          <obj_property name="ElementShortName">br_flg</obj_property>
          <obj_property name="ObjectShortName">br_flg</obj_property>
@@ -218,7 +213,6 @@
    <wvobject fp_name="group150" type="group">
       <obj_property name="label">CSR</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/tb_riscy/RISCY/csr_we" type="logic">
          <obj_property name="ElementShortName">csr_we</obj_property>
          <obj_property name="ObjectShortName">csr_we</obj_property>

@@ -33,15 +33,15 @@ end
 
 always_comb begin : RF_READ
     if (RA1 == 0) begin
-        X1 <= 'h0;
+        X1 = 'h0;
     end else begin
-        X1 <= rf[RA1];
+        X1 = rf[RA1];
     end
 
     if (RA2 == 0) begin
-        X2 <= 'h0;
+        X2 = 'h0;
     end else begin
-        X2 <= rf[RA2];
+        X2 = rf[RA2];
     end
 end
 

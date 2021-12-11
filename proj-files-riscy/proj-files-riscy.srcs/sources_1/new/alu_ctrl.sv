@@ -16,103 +16,103 @@ always_comb begin : GEN_ALU_OP
     case(OP_MODE)
         OPM_OPIMM: begin
             if ( FUNCT3 == ADD ) begin
-                ALU_SEL <= ALU_ADD;
+                ALU_SEL = ALU_ADD;
             end
             else if ( FUNCT3 == SLT ) begin
-                ALU_SEL <= ALU_SLT;
+                ALU_SEL = ALU_SLT;
             end
             else if ( FUNCT3 == SLTU ) begin
-                ALU_SEL <= ALU_SLTU;
+                ALU_SEL = ALU_SLTU;
             end
             else if ( FUNCT3 == AND ) begin
-                ALU_SEL <= ALU_AND;
+                ALU_SEL = ALU_AND;
             end
             else if ( FUNCT3 == OR ) begin
-                ALU_SEL <= ALU_OR;
+                ALU_SEL = ALU_OR;
             end
             else if ( FUNCT3 == XOR ) begin
-                ALU_SEL <= ALU_XOR;
+                ALU_SEL = ALU_XOR;
             end
             else if ( FUNCT3 == SLL ) begin
-                ALU_SEL <= ALU_SLL;
+                ALU_SEL = ALU_SLL;
             end
             else if ( FUNCT3 == SRL | FUNCT3 == SRA) begin
                 if ( FUNCT7 == F7_EN0 ) begin
-                    ALU_SEL <= ALU_SRL;
+                    ALU_SEL = ALU_SRL;
                 end
                 else if ( FUNCT7 == F7_EN1 ) begin
-                    ALU_SEL <= ALU_SRA;
+                    ALU_SEL = ALU_SRA;
                 end
                 else begin
-                    ALU_SEL <= 'h0;
+                    ALU_SEL = 'h0;
                 end
             end
             else begin
-                ALU_SEL <= 'h0;
+                ALU_SEL = 'h0;
             end
         end
 
         OPM_OP: begin
             if ( FUNCT7 == F7_EN1 ) begin
                 if ( FUNCT3 == SUB ) begin
-                    ALU_SEL <= ALU_SUB;
+                    ALU_SEL = ALU_SUB;
                 end
                 else if ( FUNCT3 == SRA ) begin
-                    ALU_SEL <= ALU_SRA;
+                    ALU_SEL = ALU_SRA;
                 end
                 else begin
-                    ALU_SEL <= 'h0;
+                    ALU_SEL = 'h0;
                 end
             end
             else if ( FUNCT7 == F7_EN0 ) begin
                 if ( FUNCT3 == ADD ) begin
-                    ALU_SEL <= ALU_ADD;
+                    ALU_SEL = ALU_ADD;
                 end
                 else if ( FUNCT3 == SLT ) begin
-                    ALU_SEL <= ALU_SLT;
+                    ALU_SEL = ALU_SLT;
                 end
                 else if ( FUNCT3 == SLTU ) begin
-                    ALU_SEL <= ALU_SLTU;
+                    ALU_SEL = ALU_SLTU;
                 end
                 else if ( FUNCT3 == AND ) begin
-                    ALU_SEL <= ALU_AND;
+                    ALU_SEL = ALU_AND;
                 end
                 else if ( FUNCT3 == OR ) begin
-                    ALU_SEL <= ALU_OR;
+                    ALU_SEL = ALU_OR;
                 end
                 else if ( FUNCT3 == XOR ) begin
-                    ALU_SEL <= ALU_XOR;
+                    ALU_SEL = ALU_XOR;
                 end
                 else if ( FUNCT3 == SLL ) begin
-                    ALU_SEL <= ALU_SLL;
+                    ALU_SEL = ALU_SLL;
                 end
                 else if ( FUNCT3 == SRL) begin
-                    ALU_SEL <= ALU_SRL;
+                    ALU_SEL = ALU_SRL;
                 end
                 else if ( FUNCT3 == SLL) begin
-                    ALU_SEL <= ALU_SLL;
+                    ALU_SEL = ALU_SLL;
                 end
                 else begin
-                    ALU_SEL <= 'h0;
+                    ALU_SEL = 'h0;
                 end
             end
             else begin
-                ALU_SEL <= 'h0;
+                ALU_SEL = 'h0;
             end
         end
 
         OPM_FETCH:
-            ALU_SEL <= ALU_ADD;
+            ALU_SEL = ALU_ADD;
         OPM_JAL:
-            ALU_SEL <= ALU_ADD;
+            ALU_SEL = ALU_ADD;
         OPM_BRANCH:
-            ALU_SEL <= ALU_ADD;
+            ALU_SEL = ALU_ADD;
         OPM_LOAD_STORE:
-            ALU_SEL <= ALU_ADD;
+            ALU_SEL = ALU_ADD;
         OPM_NOP:
-            ALU_SEL <= ALU_ADD;
+            ALU_SEL = ALU_ADD;
         default:
-            ALU_SEL <= 'h0;
+            ALU_SEL = 'h0;
     endcase
 end
 

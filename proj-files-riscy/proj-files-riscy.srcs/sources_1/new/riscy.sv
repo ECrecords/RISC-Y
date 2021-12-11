@@ -138,13 +138,13 @@
 
             always_comb begin : MAS
                 if ( mem_addr_sel ) begin
-                    mem_addr <= alu_rslt;
+                    mem_addr = alu_rslt;
                 end
                 else if ( ~mem_addr_sel ) begin
-                    mem_addr <= pc_out;
+                    mem_addr = pc_out;
                 end
                 else begin
-                    mem_addr <= 'h0;
+                    mem_addr = 'h0;
                 end
             end
 
@@ -178,13 +178,13 @@
             always_comb begin : RF_WDATA
                 case(rf_wdata_sel)
                     RFWS_ALU_RSLT:
-                        rf_wdata <= alu_rslt;
+                        rf_wdata = alu_rslt;
                     RFWS_MEM_OUT:
-                        rf_wdata <= mem_out;
+                        rf_wdata = mem_out;
                     RFWS_CSR:
-                        rf_wdata <= csr0;
+                        rf_wdata = csr0;
                     default:
-                        rf_wdata <= 'h0;
+                        rf_wdata = 'h0;
                 endcase
             end
 
@@ -215,24 +215,24 @@
             always_comb begin : ALU_A
                 case(alua_sel)
                     A_X1:
-                        alu_a <= x1;
+                        alu_a = x1;
                     A_PC:
-                        alu_a <= pc_out;
+                        alu_a = pc_out;
                     default:
-                        alu_a <= 'h0;
+                        alu_a = 'h0;
                 endcase
             end
 
             always_comb begin : ALU_B
                 case(alub_sel)
                     B_X2:
-                        alu_b <= x2;
+                        alu_b = x2;
                     B_FOUR:
-                        alu_b <= 'h4;
+                        alu_b = 'h4;
                     B_EXT_IMM:
-                        alu_b <= ext_imm;
+                        alu_b = ext_imm;
                     default:
-                        alu_b <= 'h0;
+                        alu_b = 'h0;
                 endcase
             end
 
@@ -270,31 +270,31 @@
             always_comb begin : FLAG_SEL
                 case(ir[14:12])
                     BEQ:
-                        sel_flag <= flag[5];
+                        sel_flag = flag[5];
                     BNE:
-                        sel_flag <= flag[4];
+                        sel_flag = flag[4];
                     BLT:
-                        sel_flag <= flag[3];
+                        sel_flag = flag[3];
                     BLTU:
-                        sel_flag <= flag[2];
+                        sel_flag = flag[2];
                     BGE:
-                        sel_flag <= flag[1];
+                        sel_flag = flag[1];
                     BGEU:
-                        sel_flag <= flag[0];
+                        sel_flag = flag[0];
                     default:
-                        sel_flag <= 'h0;
+                        sel_flag = 'h0;
                 endcase
             end
 
             always_comb begin : BRANCH_SEL
                 if (is_branch) begin
-                    br_flg <= sel_flag;
+                    br_flg = sel_flag;
                 end
                 else if (~is_branch) begin
-                    br_flg <= 'h0;
+                    br_flg = 'h0;
                 end
                 else begin
-                    br_flg <= 'h0;
+                    br_flg = 'h0;
                 end
             end
             //================================================

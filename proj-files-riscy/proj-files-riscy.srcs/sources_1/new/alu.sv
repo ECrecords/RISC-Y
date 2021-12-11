@@ -26,39 +26,39 @@ module alu(
     always_comb begin : ALU_OP
         case(SEL)
             ALU_ADD:
-                C <= a_sig + b_sig;
+                C = a_sig + b_sig;
             ALU_SLT:
-                C <= (a_sig < b_sig) ? 'h1 : 'h0;
+                C = (a_sig < b_sig) ? 'h1 : 'h0;
             ALU_SLTU:
-                C <= (A < B) ? 'h1 : 'h0;
+                C = (A < B) ? 'h1 : 'h0;
             ALU_AND:
-                C <= A & B;
+                C = A & B;
             ALU_OR:
-                C <= A | B;
+                C = A | B;
             ALU_XOR:
-                C <= A ^ B;
+                C = A ^ B;
             ALU_SLL:
-                C <= A << B[4:0];
+                C = A << B[4:0];
             ALU_SRL:
-                C <= A >> B[4:0];
+                C = A >> B[4:0];
             ALU_SUB:
-                C <= a_sig - b_sig;
+                C = a_sig - b_sig;
             ALU_SRA:
-                C <= a_sig >>> B[4:0];
+                C = a_sig >>> B[4:0];
             default:
-                C <= 'h0;
+                C = 'h0;
         endcase
     end
 
     always_comb begin : FLAGS
-        EQ <= (a_sig == b_sig) ? 'h1 : 'h0;
-        NE <= (a_sig != b_sig) ? 'h1 : 'h0;
+        EQ = (a_sig == b_sig) ? 'h1 : 'h0;
+        NE = (a_sig != b_sig) ? 'h1 : 'h0;
 
-        LT <= (a_sig < b_sig) ? 'h1 : 'h0;
-        LTU <= (A < B) ? 'h1 : 'h0;
+        LT = (a_sig < b_sig) ? 'h1 : 'h0;
+        LTU = (A < B) ? 'h1 : 'h0;
 
-        GE <= (a_sig >= b_sig) ? 'h1 : 'h0;
-        GEU <= (A >= B) ? 'h1 : 'h0;
+        GE = (a_sig >= b_sig) ? 'h1 : 'h0;
+        GEU = (A >= B) ? 'h1 : 'h0;
 
     end
 endmodule
