@@ -124,10 +124,10 @@
                         //=========================
                         //Reg File
                         RF_WE               <= 0;
-                        RF_WDATA_SEL        <= 'hx;
+                        RF_WDATA_SEL        <= 'h0;
                         //=========================
                         //Imm Gen
-                        IMM_SEL             <= 'hx;
+                        IMM_SEL             <= 'h0;
                         //=========================
                         //CSR
                         CSR_WE              <= 0;
@@ -149,25 +149,25 @@
                         //Memory
                         MEM_WE              <= 0;
                         MEM_RE              <= 0;
-                        MEM_ADDR_SEL        <= 'hx;
+                        MEM_ADDR_SEL        <= 'h0;
                         //=========================
                         //Intruct Reg
                         IR_WE               <= 1;
                         //=========================
                         //Reg File
                         RF_WE               <= 0;
-                        RF_WDATA_SEL        <= 'hx;
+                        RF_WDATA_SEL        <= 'h0;
                         //=========================
                         //Imm Gen
-                        IMM_SEL             <= 'hx;
+                        IMM_SEL             <= 'h0;
                         //=========================
                         //CSR
                         CSR_WE              <= 0;
                         //=========================
                         //ALU
-                        ALUA_SEL            <= 'hx;
-                        ALUB_SEL            <= 'hx;
-                        OP_MODE             <= 'hx;
+                        ALUA_SEL            <= 'h0;
+                        ALUB_SEL            <= 'h0;
+                        OP_MODE             <= 'h0;
                         //=========================
                         //Branch Logic
                         IS_BRANCH           <= 0;
@@ -181,17 +181,17 @@
                         //Memory
                         MEM_WE              <= 0;
                         MEM_RE              <= 0;
-                        MEM_ADDR_SEL        <= 'hx;
+                        MEM_ADDR_SEL        <= 'h0;
                         //=========================
                         //Intruct Reg
                         IR_WE               <= 0;
                         //=========================
                         //Reg File
                         RF_WE               <= 0;
-                        RF_WDATA_SEL        <= 'hx;
+                        RF_WDATA_SEL        <= 'h0;
                         //=========================
                         //Imm Gen
-                        IMM_SEL             <= 'hx;
+                        IMM_SEL             <= 'h0;
                         //=========================
                         //CSR
                         CSR_WE              <= 0;
@@ -199,7 +199,7 @@
                         //ALU
                         ALUA_SEL            <= A_X1;
                         ALUB_SEL            <= B_X2;
-                        OP_MODE             <= 'hx;
+                        OP_MODE             <= 'h0;
                         //=========================
                         //Branch Logic
                         IS_BRANCH           <= 0;
@@ -213,14 +213,14 @@
                         //Memory
                         MEM_WE              <= 0;
                         MEM_RE              <= 0;
-                        MEM_ADDR_SEL        <= 'hx;
+                        MEM_ADDR_SEL        <= 'h0;
                         //=========================
                         //Intruct Reg
                         IR_WE               <= 0;
                         //=========================
                         //Reg File
                         RF_WE               <= 0;
-                        RF_WDATA_SEL        <= 'hx;
+                        RF_WDATA_SEL        <= 'h0;
                         //=========================
                         //Imm Gen
                         IMM_SEL             <= I_IMM;
@@ -245,17 +245,17 @@
                         //Memory
                         MEM_WE              <= 0;
                         MEM_RE              <= 0;
-                        MEM_ADDR_SEL        <= 'hx;
+                        MEM_ADDR_SEL        <= 'h0;
                         //=========================
                         //Intruct Reg
                         IR_WE               <= 0;
                         //=========================
                         //Reg File
                         RF_WE               <= 0;
-                        RF_WDATA_SEL        <= 'hx;
+                        RF_WDATA_SEL        <= 'h0;
                         //=========================
                         //Imm Gen
-                        IMM_SEL             <= 'hx;
+                        IMM_SEL             <= 'h0;
                         //=========================
                         //CSR
                         CSR_WE              <= 0;
@@ -277,14 +277,14 @@
                         //Memory
                         MEM_WE              <= 0;
                         MEM_RE              <= 0;
-                        MEM_ADDR_SEL        <= 'hx;
+                        MEM_ADDR_SEL        <= 'h0;
                         //=========================
                         //Intruct Reg
                         IR_WE               <= 0;
                         //=========================
                         //Reg File
                         RF_WE               <= 0;
-                        RF_WDATA_SEL        <= 'hx;
+                        RF_WDATA_SEL        <= 'h0;
                         //=========================
                         //Imm Gen
                         IMM_SEL             <= J_IMM;
@@ -309,14 +309,14 @@
                         //Memory
                         MEM_WE              <= 0;
                         MEM_RE              <= 0;
-                        MEM_ADDR_SEL        <= 'hx;
+                        MEM_ADDR_SEL        <= 'h0;
                         //=========================
                         //Intruct Reg
                         IR_WE               <= 0;
                         //=========================
                         //Reg File
                         RF_WE               <= 0;
-                        RF_WDATA_SEL        <= 'hx;
+                        RF_WDATA_SEL        <= 'h0;
                         //=========================
                         //Imm Gen
                         IMM_SEL             <= B_IMM;
@@ -342,14 +342,14 @@
                         //Memory
                         MEM_WE              <= 0;
                         MEM_RE              <= 0;
-                        MEM_ADDR_SEL        <= 'hx;
+                        MEM_ADDR_SEL        <= 'h0;
                         //=========================
                         //Intruct Reg
                         IR_WE               <= 0;
                         //=========================
                         //Reg File
                         RF_WE               <= 0;
-                        RF_WDATA_SEL        <= 'hx;
+                        RF_WDATA_SEL        <= 'h0;
                         //=========================
                         //Imm Gen
                         IMM_SEL             <= I_IMM;
@@ -375,14 +375,14 @@
                         //Memory
                         MEM_WE              <= 0;
                         MEM_RE              <= 0;
-                        MEM_ADDR_SEL        <= 'hx;
+                        MEM_ADDR_SEL        <= 'h0;
                         //=========================
                         //Intruct Reg
                         IR_WE               <= 0;
                         //=========================
                         //Reg File
                         RF_WE               <= 0;
-                        RF_WDATA_SEL        <= 'hx;
+                        RF_WDATA_SEL        <= 'h0;
                         //=========================
                         //Imm Gen
                         IMM_SEL             <= S_IMM;
@@ -409,25 +409,25 @@
                         //Memory
                         MEM_WE              <= 0;
                         MEM_RE              <= 0;
-                        MEM_ADDR_SEL        <= 'hx;
+                        MEM_ADDR_SEL        <= 'h0;
                         //=========================
                         //Intruct Reg
                         IR_WE               <= 0;
                         //=========================
                         //Reg File
                         RF_WE               <= 0;
-                        RF_WDATA_SEL        <= 'hx;
+                        RF_WDATA_SEL        <= 'h0;
                         //=========================
                         //Imm Gen
-                        IMM_SEL             <= 'hx;
+                        IMM_SEL             <= 'h0;
                         //=========================
                         //CSR
                         CSR_WE              <= 1;
                         //=========================
                         //ALU
-                        ALUA_SEL            <= 'hx;
-                        ALUB_SEL            <= 'hx;
-                        OP_MODE             <= 'hx;
+                        ALUA_SEL            <= 'h0;
+                        ALUB_SEL            <= 'h0;
+                        OP_MODE             <= 'h0;
                         //=========================
                         //Branch Logic
                         IS_BRANCH           <= 0;
@@ -448,17 +448,17 @@
                         //=========================
                         //Reg File
                         RF_WE               <= 0;
-                        RF_WDATA_SEL        <= 'hx;
+                        RF_WDATA_SEL        <= 'h0;
                         //=========================
                         //Imm Gen
-                        IMM_SEL             <= 'hx;
+                        IMM_SEL             <= 'h0;
                         //=========================
                         //CSR
                         CSR_WE              <= 0;
                         //=========================
                         //ALU
-                        ALUA_SEL            <= 'hx;
-                        ALUB_SEL            <= 'hx;
+                        ALUA_SEL            <= 'h0;
+                        ALUB_SEL            <= 'h0;
                         OP_MODE             <= OPM_NOP;
                         //=========================
                         //Branch Logic
@@ -480,18 +480,18 @@
                         //=========================
                         //Reg File
                         RF_WE               <= 0;
-                        RF_WDATA_SEL        <= 'hx;
+                        RF_WDATA_SEL        <= 'h0;
                         //=========================
                         //Imm Gen
-                        IMM_SEL             <= 'hx;
+                        IMM_SEL             <= 'h0;
                         //=========================
                         //CSR
                         CSR_WE              <= 0;
                         //=========================
                         //ALU
-                        ALUA_SEL            <= 'hx;
-                        ALUB_SEL            <= 'hx;
-                        OP_MODE             <= 'hx;
+                        ALUA_SEL            <= 'h0;
+                        ALUB_SEL            <= 'h0;
+                        OP_MODE             <= 'h0;
                         //=========================
                         //Branch Logic
 
@@ -513,18 +513,18 @@
                         //=========================
                         //Reg File
                         RF_WE               <= 0;
-                        RF_WDATA_SEL        <= 'hx;
+                        RF_WDATA_SEL        <= 'h0;
                         //=========================
                         //Imm Gen
-                        IMM_SEL             <= 'hx;
+                        IMM_SEL             <= 'h0;
                         //=========================
                         //CSR
                         CSR_WE              <= 0;
                         //=========================
                         //ALU
-                        ALUA_SEL            <= 'hx;
-                        ALUB_SEL            <= 'hx;
-                        OP_MODE             <= 'hx;
+                        ALUA_SEL            <= 'h0;
+                        ALUB_SEL            <= 'h0;
+                        OP_MODE             <= 'h0;
                         //=========================
                         //Branch Logic
                         IS_BRANCH           <= 0;
@@ -538,7 +538,7 @@
                         //Memory
                         MEM_WE              <= 0;
                         MEM_RE              <= 0;
-                        MEM_ADDR_SEL        <= 'hx;
+                        MEM_ADDR_SEL        <= 'h0;
                         //=========================
                         //Intruct Reg
                         IR_WE               <= 0;
@@ -548,16 +548,16 @@
                         RF_WDATA_SEL        <= RFWS_ALU_RSLT;
                         //=========================
                         //Imm Gen
-                        IMM_SEL             <= 'hx;
+                        IMM_SEL             <= 'h0;
                         //=========================
                         //CSR
                         CSR_WE              <= 0;
                         //=========================
                         //ALU
 
-                        ALUA_SEL            <= 'hx;
-                        ALUB_SEL            <= 'hx;
-                        OP_MODE             <= 'hx;
+                        ALUA_SEL            <= 'h0;
+                        ALUB_SEL            <= 'h0;
+                        OP_MODE             <= 'h0;
                         //=========================
                         //Branch Logic
                         IS_BRANCH           <= 0;
@@ -571,7 +571,7 @@
                         //Memory
                         MEM_WE              <= 0;
                         MEM_RE              <= 0;
-                        MEM_ADDR_SEL        <= 'hx;
+                        MEM_ADDR_SEL        <= 'h0;
                         //=========================
                         //Intruct Reg
                         IR_WE               <= 0;
@@ -581,15 +581,15 @@
                         RF_WDATA_SEL        <= RFWS_MEM_OUT;
                         //=========================
                         //Imm Gen
-                        IMM_SEL             <= 'hx;
+                        IMM_SEL             <= 'h0;
                         //=========================
                         //CSR
                         CSR_WE              <= 0;
                         //=========================
                         //ALU
-                        ALUA_SEL            <= 'hx;
-                        ALUB_SEL            <= 'hx;
-                        OP_MODE             <= 'hx;
+                        ALUA_SEL            <= 'h0;
+                        ALUB_SEL            <= 'h0;
+                        OP_MODE             <= 'h0;
                         //=========================
                         //Branch Logic
                         IS_BRANCH           <= 0;
@@ -613,15 +613,15 @@
                         RF_WDATA_SEL        <= RFWS_CSR;
                         //=========================
                         //Imm Gen
-                        IMM_SEL             <= 'hx;
+                        IMM_SEL             <= 'h0;
                         //=========================
                         //CSR
                         CSR_WE              <= 0;
                         //=========================
                         //ALU
-                        ALUA_SEL            <= 'hx;
-                        ALUB_SEL            <= 'hx;
-                        OP_MODE             <= 'hx;
+                        ALUA_SEL            <= 'h0;
+                        ALUB_SEL            <= 'h0;
+                        OP_MODE             <= 'h0;
                         //=========================
                         //Branch Logic
                         IS_BRANCH           <= 0;
@@ -635,25 +635,25 @@
                         //Memory
                         MEM_WE              <= 0;
                         MEM_RE              <= 0;
-                        MEM_ADDR_SEL        <= 'hx;
+                        MEM_ADDR_SEL        <= 'h0;
                         //=========================
                         //Intruct Reg
                         IR_WE               <= 'h0;
                         //=========================
                         //Reg File
                         RF_WE               <= 0;
-                        RF_WDATA_SEL        <= 'hx;
+                        RF_WDATA_SEL        <= 'h0;
                         //=========================
                         //Imm Gen
-                        IMM_SEL             <= 'hx;
+                        IMM_SEL             <= 'h0;
                         //=========================
                         //CSR
                         CSR_WE              <= 0;
                         //=========================
                         //ALU
-                        ALUA_SEL            <= 'hx;
-                        ALUB_SEL            <= 'hx;
-                        OP_MODE             <= 'hx;
+                        ALUA_SEL            <= 'h0;
+                        ALUB_SEL            <= 'h0;
+                        OP_MODE             <= 'h0;
                         //=========================
                         //Branch Logic
                         IS_BRANCH           <= 0;

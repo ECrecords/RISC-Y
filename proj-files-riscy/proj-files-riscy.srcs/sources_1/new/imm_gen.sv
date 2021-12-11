@@ -23,7 +23,7 @@ module imm_gen (
             J_IMM:
                 EXT_IMM <= {{12{IMM_FIELD[31]}} ,IMM_FIELD[19:12], IMM_FIELD[20], IMM_FIELD[30:25], IMM_FIELD[24:21], 1'b0};
             default:
-                EXT_IMM <= 'hx;
+                EXT_IMM <= 'h0;
         endcase
     end
 endmodule

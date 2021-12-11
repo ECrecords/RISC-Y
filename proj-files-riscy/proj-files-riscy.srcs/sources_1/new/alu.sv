@@ -46,7 +46,7 @@ module alu(
             ALU_SRA:
                 C <= a_sig >>> B[4:0];
             default:
-                C <= 'hx;
+                C <= 'h0;
         endcase
     end
 

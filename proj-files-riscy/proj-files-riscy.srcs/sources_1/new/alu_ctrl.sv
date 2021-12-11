@@ -44,11 +44,11 @@ always_comb begin : GEN_ALU_OP
                     ALU_SEL <= ALU_SRA;
                 end
                 else begin
-                    ALU_SEL <= 'hx;
+                    ALU_SEL <= 'h0;
                 end
             end
             else begin
-                ALU_SEL <= 'hx;
+                ALU_SEL <= 'h0;
             end
         end
 
@@ -61,7 +61,7 @@ always_comb begin : GEN_ALU_OP
                     ALU_SEL <= ALU_SRA;
                 end
                 else begin
-                    ALU_SEL <= 'hx;
+                    ALU_SEL <= 'h0;
                 end
             end
             else if ( FUNCT7 == F7_EN0 ) begin
@@ -93,11 +93,11 @@ always_comb begin : GEN_ALU_OP
                     ALU_SEL <= ALU_SLL;
                 end
                 else begin
-                    ALU_SEL <= 'hx;
+                    ALU_SEL <= 'h0;
                 end
             end
             else begin
-                ALU_SEL <= 'hx;
+                ALU_SEL <= 'h0;
             end
         end
 
@@ -112,7 +112,7 @@ always_comb begin : GEN_ALU_OP
         OPM_NOP:
             ALU_SEL <= ALU_ADD;
         default:
-            ALU_SEL <= 'hx;
+            ALU_SEL <= 'h0;
     endcase
 end
 

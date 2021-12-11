@@ -144,7 +144,7 @@
                     mem_addr <= pc_out;
                 end
                 else begin
-                    mem_addr <= 'hx;
+                    mem_addr <= 'h0;
                 end
             end
 
@@ -184,7 +184,7 @@
                     RFWS_CSR:
                         rf_wdata <= csr0;
                     default:
-                        rf_wdata <= 'hx;
+                        rf_wdata <= 'h0;
                 endcase
             end
 
@@ -219,7 +219,7 @@
                     A_PC:
                         alu_a <= pc_out;
                     default:
-                        alu_a <= 'hx;
+                        alu_a <= 'h0;
                 endcase
             end
 
@@ -232,7 +232,7 @@
                     B_EXT_IMM:
                         alu_b <= ext_imm;
                     default:
-                        alu_b <= 'hx;
+                        alu_b <= 'h0;
                 endcase
             end
 
@@ -282,7 +282,7 @@
                     BGEU:
                         sel_flag <= flag[0];
                     default:
-                        sel_flag <= 'hx;
+                        sel_flag <= 'h0;
                 endcase
             end
 
@@ -294,7 +294,7 @@
                     br_flg <= 'h0;
                 end
                 else begin
-                    br_flg <= 'hx;
+                    br_flg <= 'h0;
                 end
             end
             //================================================
